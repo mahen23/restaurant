@@ -3,3 +3,27 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+
+patron_new:
+    path: /patron/new
+    controller: App\Controller\PatronController::new
+    methods: [GET, POST]
+
+patron_success:
+    path: /patron/success
+    controller: App\Controller\PatronController::success
+    methods: [GET]
+
+insert_patron:
+    path: /insert-patron
+    controller: App\Controller\PatronController::insertPatron
+
+add_patron:
+    path: /add-patron
+    controller: App\Controller\PatronController::addPatron
+    methods: POST
+
+list_patrons:
+    path: /list-patrons
+    controller: App\Controller\PatronController::listPatrons

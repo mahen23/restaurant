@@ -1,0 +1,22 @@
+{# templates/insert_patron.html.twig #}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert Patron</title>
+</head>
+<body>
+    <h1>Insert Patron</h1>
+
+    <form action="{{ path('add_patron') }}" method="post">
+        <label for="user">Select User:</label>
+        <select name="user" id="user" required>
+            {% for user in users %}
+                <option value="{{ user.id }}">{{ user.firstName }} {{ user.lastName }}</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit">Insert</button>
+    </form>
+</body>
+</html>
